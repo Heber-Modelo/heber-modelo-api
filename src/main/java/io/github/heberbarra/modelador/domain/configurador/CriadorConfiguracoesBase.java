@@ -14,6 +14,7 @@
 package io.github.heberbarra.modelador.domain.configurador;
 
 import io.github.heberbarra.modelador.domain.verificador.VerificadorAbstratoJSONAtributo;
+import java.util.Map;
 
 /**
  * Classe auxiliar responsável por criar a pasta e os arquivos de configuração do programa.
@@ -74,6 +75,14 @@ public abstract class CriadorConfiguracoesBase {
      * @see CriadorConfiguracoesBase#sobrescreverArquivoPaleta(String, String)
      * */
     public abstract void sobrescreverArquivoConfiguracoes(String arquivoConfiguracoes, String dadosToml);
+
+    /**
+     * Sobrescreve o arquivo .env do programa com os dados fornecidos.
+     * <br>
+     * Overwrites the program's .env file with the provided data.
+     * @param dados os dados a serem escritos no arquivo / the data that should be written into the file.
+     * */
+    public abstract void sobrescreverArquivoDotEnv(Map<String, String> dados);
 
     /**
      * Sobrescreve o arquivo de paleta do programa com os dados fornecidos.
