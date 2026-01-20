@@ -101,5 +101,4 @@ public interface ILeitorConfiguracao {
      * @return os dados lidos do arquivo de paleta / the data read from the palette file.
      * */
     TomlTable getInformacoesPaleta();
-
 }

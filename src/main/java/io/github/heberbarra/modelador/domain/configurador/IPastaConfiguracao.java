@@ -46,5 +46,4 @@ public interface IPastaConfiguracao {
     String decidirPastaConfiguracao();
 
     String getPasta();
-
 }
