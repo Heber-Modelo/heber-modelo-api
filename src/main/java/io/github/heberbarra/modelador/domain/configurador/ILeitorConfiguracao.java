@@ -71,15 +71,23 @@ public interface ILeitorConfiguracao {
     /**
      * Lê o arquivo de configuração do programa e retorna seus dados, mas não os armazena.
      * <br>
-     * Reads the programa's configuration file and returns the data read, but don't store it.
+     * Reads the program's configuration file and returns the data read, but doesn't store it.
      * @return os dados lidos do arquivo / the data read from the file.
      * */
     TomlTable lerArquivoConfiguracoesSemSalvar();
 
     /**
+     * Lê o arquivo .env e retorna seus dados, mas não os armazena.
+     * <br>
+     * Reads the program's .env file and returns the data red, but doesn't store it.
+     * @return os dados lidos do arquivo / the data read from the file.
+     * */
+    Map<String, String> lerArquivoDotEnvSemSalvar();
+
+    /**
      * Lê o arquivo de paleta do programa e retorna seus dados, mas não os armazena.
      * <br>
-     * Reads the programa's palette file and returns the data read, but don't store it.
+     * Reads the program's palette file and returns the data read, but doesn't store it.
      * @return os dados lidos do arquivo / the data read from the file.
      * */
     TomlTable lerArquivoPaletaSemSalvar();
@@ -93,6 +101,14 @@ public interface ILeitorConfiguracao {
      * @return os dados lidos do arquivo de configuração / the data read from the configuration file.
      * */
     TomlTable getInformacoesConfiguracoes();
+
+    /**
+     * Retorna os dados lidos previamente do arquivo .env.
+     * <br>
+     * Returns the previously read data from .env file.
+     * @return os dados lidos do arquivo .env / the data read from .env file.
+     * */
+    Map<String, String> getInformacoesDotEnv();
 
     /**
      * Retorna os dados lidos previamente do arquivo de paleta.
