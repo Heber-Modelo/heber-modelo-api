@@ -66,6 +66,16 @@ public interface IVerificadorConfiguracao {
     void verificarAtributoConfiguracao(List<Map<String, String>> atributos, String nomeAtributo, Object valor);
 
     /**
+     * Verifica uma variável do .env.
+     * <br>
+     * Verifies an .env variable.
+     * @param atributos as variáveis do .env / the .env variables.
+     * @param nomeVariavel o nome da variável / the variable name.
+     * @param valor o valor atual da variável / the current value of the variable.
+     * */
+    void verificarAtributoDotEnv(Map<String, String> atributos, String nomeVariavel, Object valor);
+
+    /**
      * Verifica uma variável da paleta de cores. Se houver algum erro será indicado por {@link IVerificadorConfiguracao#configuracoesContemErrosGraves()}
      * <br>
      * Verifies a variable of the color palette. If there is an error it will be shown by {@link IVerificadorConfiguracao#configuracoesContemErrosGraves()}
@@ -83,6 +93,15 @@ public interface IVerificadorConfiguracao {
      * @param dados a configuração atual do programa / the program's current configuration.
      * */
     void verificarArquivoConfiguracao(Map<String, List<Map<String, String>>> configuracaoPadrao, TomlTable dados);
+
+    /**
+     * Verifica o arquivo .env e reporta os erros graves encontrados ao usuário.
+     * <br>
+     * Verifies the configuration file and reports all significant erros to the user.
+     * @param dotEnvPadrao o .env padrão do programa / the program's default .env.
+     * @param dadosDotEnv o .env atual do programa / the program's current .env configuration.
+     * */
+    void verificarArquivoDotEnv(Map<String, String> dotEnvPadrao, Map<String, String> dadosDotEnv);
 
     /**
      * Verifica o arquivo da paleta de cores e reporta os erros graves encontrados ao usuário.

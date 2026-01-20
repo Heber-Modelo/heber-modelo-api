@@ -35,4 +35,11 @@ public interface ICombinadorConfiguracoes {
             TomlTable configuracao,
             String nomeAtributo,
             String nomeValor);
+
+    /**
+     * Combina os dados contidos no .env padrão do programa com a configuração feita pelo usuário.
+     * <br>
+     * Combines the program's default .env data with the user's.
+     * */
+    Map<String, String> combinarDadosDotEnv(Map<String, String> dotEnvPadrao, Map<String, String> dotEnvUsuario);
 }
