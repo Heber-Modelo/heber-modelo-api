@@ -7,15 +7,15 @@ plugins {
 }
 
 group = "io.github.heberbarra"
-version = "0.0.13-SNAP"
+version = "0.1.0-ALPHA"
 
 repositories {
     mavenCentral()
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_23
-    targetCompatibility = JavaVersion.VERSION_23
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
 }
 
 spotless {
@@ -62,12 +62,6 @@ mavenPublishing {
                 id = "JoaoGabee"
                 name = "João Gabriel de Cristo"
                 url = "https://github.com/JoaoGabeee"
-            }
-
-            developer {
-                id = "Blashss"
-                name = "Matheus de Assis de Paula"
-                url = "https://github.com/Blashss"
             }
 
             developer {
